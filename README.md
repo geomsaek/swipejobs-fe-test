@@ -17,7 +17,7 @@
 * Font awesome icons
 
 ## Notes on build
-* Although the provided screen shows a single ```job view```, the available API endpoints suggest a page like this exists amongst a wider tree. As such I've built a simple example to demonstrate how I thought this would work.
+* Although the provided screen shows a single ```job view```, the available API endpoints suggest a page like this exists amongst a wider tree. As such, I've built a simple example to demonstrate how I thought this would work.
 * Not all typographic global styles exist. Only those that were used are styled.
 * Basic grid layout is custom. This was a contextual choice and to reduce library overhead. 
 * Simple messages have been added to the ```Accept & Reject``` job buttons.
