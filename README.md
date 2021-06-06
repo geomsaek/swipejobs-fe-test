@@ -8,7 +8,7 @@
     * ```/jobs/:id```, displays a specific job
 
 ## Under the hood
-* React
+* React - Typescript
 * React Helmet
 * React Router
 * React Redux
