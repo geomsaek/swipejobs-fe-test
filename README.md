@@ -26,7 +26,7 @@
 * Screens have been optimised to work in mobile & tablet devices.
 * For the purposes of simplicity, routes have been set to: Profile, Job List, Job View. All other URLs will show an error page.
 * Browser compatiblity extends to the following browsers: Google Chrome, Firefox.
-* WCAG 2.0 AA standards have been applied to markup where applicable.
+* WCAG 2.0 AA standards have been applied where applicable.
 * Modules are built with a ```mobile first``` approach.
 
 ## Assumptions
