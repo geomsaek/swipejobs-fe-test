@@ -30,7 +30,7 @@
 * Modules are built with a ```mobile first``` approach.
 
 ## Assumptions
-* User has already been verified, successfully logged in and allocated their "worker ID".
+* User has already been verified, successfully logged in and allocated their ```worker ID```.
 * Current screens that are required are only: Profile, Job List and Job View.
 * All validation of data request and handling has already been done.
 * Data updated in the store is sent to an external/persistent source (on application close or on update).
