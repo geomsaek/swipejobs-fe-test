@@ -9,6 +9,7 @@
 
 ## Under the hood
 * React
+* React Helmet
 * React Router
 * React Redux
 * Parcel JS (compiler)
