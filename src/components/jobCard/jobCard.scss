@@ -1,0 +1,104 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.job-card {
+
+    width: 100%;
+
+    a {
+        text-decoration: none;
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: rem(120);
+        overflow: hidden;
+        border-radius: rem(3) rem(3) 0 0;
+        margin: 0 0 rem(20) 0;
+        transition: opacity 0.5s ease;
+    }
+
+    &__cta {
+
+        padding: rem(8) 0 0 0;
+
+        span {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            align-content: center;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            color: $black;
+            text-decoration: none;
+
+            svg {
+                margin: 0 0 0 rem(8);
+            }
+        }
+    }
+
+}
+
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    .job-card {
+
+        width: 100%;
+
+        a {
+
+            &:hover,
+            &:focus {
+
+                .job-card__img {
+                    opacity: 0.8;
+                }
+
+                .job-card__cta {
+                    span {
+                        text-decoration: underline;
+                        color: $mint;
+
+                        svg {
+                            margin: 0 0 0 rem(15);
+                        }
+                    }
+                }
+            }
+
+        }
+    
+        &__img {
+            position: relative;
+            width: 100%;
+            height: rem(120);
+            overflow: hidden;
+            border-radius: rem(3) rem(3) 0 0;
+            margin: 0 0 rem(20) 0;
+        }
+    
+        &__cta {
+    
+            padding: rem(8) 0 0 0;
+    
+            span {
+
+                transition: color 0.4s ease;
+    
+                svg {
+                    transition: margin 0.4s ease;
+                }
+
+
+            }
+        }
+    
+    }
+
+}

@@ -1,0 +1,71 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.job-action-btns {
+    
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    background-color: $white;
+    border-radius: 0 0 rem(3) rem(3);
+    padding: rem(30) rem($padding);
+    margin: 0 0 rem(40) 0;
+
+    &__col {
+        width: 100%;
+        margin: 0 0 rem(8) 0;
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__message {
+        width: 100%;
+        margin: rem(20) 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: rem(20);
+        line-height: rem(22);
+        color: $mint;
+
+        &.error {
+            color: red;
+        }
+    }
+
+}
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    .job-action-btns {
+        
+        justify-content: space-between;
+
+        &__col {
+            width: 49.5%;
+            margin: 0;
+        }
+    
+    }
+
+}
+
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    .job-action-btns {
+        
+        padding: rem(30) rem(25);
+    
+    }
+
+}

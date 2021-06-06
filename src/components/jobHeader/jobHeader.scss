@@ -1,0 +1,51 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.job-header {
+ 
+    width: 100%;
+    margin: rem(15) 0 0 0;
+
+    &__content {
+        background-color: $white;
+        width: 100%;
+    }
+    
+    &__img {
+        position: relative;
+        height: rem(130);
+        overflow: hidden;
+        border-radius: rem(5) rem(5) 0 0;
+    }
+
+}
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    .job-header {
+        
+        &__img {
+            height: rem(250);
+        }
+    
+    }
+
+}
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    .job-header {
+        
+        &__img {
+            height: rem(280);
+        }
+    
+    }
+
+}

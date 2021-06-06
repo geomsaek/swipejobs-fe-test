@@ -1,0 +1,18 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.logo {
+    width: 100%;
+    background-image: url('../../assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: rem(60);
+    
+}
+
+/*
+    Small Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+
+}

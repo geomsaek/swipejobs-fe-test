@@ -1,0 +1,189 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.job-rows {
+
+    background-color: $white;
+    padding: 0 rem($padding);
+
+    &__item {
+        padding: rem(25) 0;
+        border-bottom: rem(1) solid $light-grey;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
+
+        &-icon {
+            margin: 0 rem(20) 0 0;
+
+            svg {
+                width: rem(25) !important;
+                height: rem(25);
+            }
+        }
+
+        &-map {
+
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+
+            &:hover,
+            &:focus {
+                outline: 0;
+                text-decoration: none;
+            }
+
+            svg {
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translateX(-50%);
+                transition: transform 0.4s ease, opacity 0.4s ease;
+            }
+
+        }
+
+        &-title {
+            width: 100%;
+            font-size: rem(17);
+            line-height: rem(19);
+            font-weight: 700;
+            padding: 0 0 rem(8) 0;
+        }
+
+        &-address {
+            width: 100%;
+            font-weight: 400;
+            font-size: rem(17);
+            line-height: rem(17);
+            padding: 0 rem(10) 0 0;
+        }
+
+        &-distance {
+            width: 100%;
+            font-weight: 300;
+            margin: rem(12) 0 0 0;
+            padding: 0 rem(10) 0 0;
+            font-size: rem(14);
+            line-height: rem(14);
+        }
+
+        &-date {
+            width: 100%;
+            font-size: rem(16);
+            line-height: rem(19);
+            padding: rem(6) rem(10) rem(6) 0;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        &-content {
+
+            width: 100%;
+
+            a:not([class]) {
+                color: $black;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    text-decoration: underline;
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: rem(8) 0 0 0;
+                margin: 0;
+
+                li {
+                    list-style: none;
+                    padding: 0 rem(10) rem(10) rem(12);
+                    margin: 0;
+                    position: relative;
+                    line-height: rem(16);
+
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: rem(8);
+                        width: rem(5);
+                        height: rem(2);
+                        background-color: $black;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+
+}
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    .job-rows {
+
+        &__item {
+    
+            &-date {
+                font-size: rem(18);
+                line-height: rem(20);
+            }    
+
+            &-map {
+
+                padding: 0 rem(50) 0 0;
+                
+                &:hover,
+                &:focus {
+
+                    svg {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    .job-rows {
+
+        padding: 0 rem(25);
+    
+        &__item {
+            padding: rem(25) 0;
+        }
+
+    }
+
+}

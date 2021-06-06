@@ -1,0 +1,199 @@
+
+
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "./imports/variables";
+@import "./imports/utils";
+@import "./imports/typography";
+
+.sr-only {
+	@include sr-only;
+}
+
+::-moz-selection {
+	background: $black;
+	color: $white;
+}
+::selection {
+	background: $black;
+	color: $white;
+}
+
+body {
+	
+	font-family: $primary-font;
+	font-size: $body-size;
+	line-height: $body-line;
+	font-weight: 400;
+	color: $black;
+	background-color: $light-grey;
+
+	* {
+		font-family: $primary-font;
+	}
+
+}
+
+.btn {
+	-webkit-appearance: none;
+	width: auto;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: $white;
+	border-radius: rem(3);
+	transition: background-color 0.4s ease;
+	font-size: rem(16);
+	line-height: rem(16);
+	color: rgba($black, 0.5);
+	border: rem(1) solid rgba($black, 0.5);
+	padding: rem(20) rem(20);
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $black;
+		color: $white;
+		border-color: $black;
+	}
+
+}
+
+
+.component-wrapper {
+
+	display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+	overflow: hidden;
+
+	&--bg-grey {
+		background-color: $light-grey;
+	}
+    
+    &__inner {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 rem($padding);
+    }
+
+	&__content {
+		border-radius: rem(3);
+		background-color: $white;
+		padding: rem(30) rem($padding);
+		margin: rem(20) 0;
+		display: flex;
+		justify-content: center;
+		flex-flow: row wrap;
+		align-content: flex-start;
+		align-content: flex-start;
+	}
+
+	&__col {
+		width: 100%;
+		margin: 0 0 rem(30) 0;
+
+	}
+}
+
+/*
+    Small Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+
+    .component-wrapper {
+    
+        &__inner {
+            max-width: map-get($container-max-widths, 'sm');
+        }
+
+		&--listing {
+			
+			.component-wrapper__col {
+				width: 48%;
+				margin: 0 3% 3% 0;
+
+				&:nth-child(odd) {
+					margin: 0 0 5% 0;
+				}
+			}
+
+		}
+    }   
+
+}
+
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    .component-wrapper {
+    
+        &__inner {
+            max-width: map-get($container-max-widths, 'md');
+        }
+
+		&__content {
+			padding: rem(30) rem($padding);
+			margin: rem(30) 0;
+		}
+
+    }
+
+}
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    .component-wrapper {
+    
+        &__inner {
+            max-width: map-get($container-max-widths, 'lg');
+        }
+
+		&__content {
+			padding: rem(40) rem(30);
+			margin: rem(40) 0;
+		}
+
+		&--listing {
+			
+			.component-wrapper__col {
+				width: 32%;
+				margin: 0 2% 2% 0;
+
+				&:nth-child(odd) {
+					margin: 0 2% 2% 0;
+				}
+
+				&:nth-child(3n + 1) {
+					margin: 0 0 2% 0;
+				}
+			}
+
+		}
+
+    }
+    
+}
+
+/*
+    XLarge Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+
+
+    .component-wrapper {
+    
+        &__inner {
+            max-width: map-get($container-max-widths, 'xl');
+        }
+
+    }
+
+}

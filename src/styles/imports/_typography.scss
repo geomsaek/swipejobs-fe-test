@@ -1,0 +1,64 @@
+@import "./variables";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    color: $black;
+    width: 100%;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: rem(26);
+    line-height: rem(28);
+    padding: 0 0 rem(20) 0;
+}
+
+h4 {
+    font-size: rem(21);
+    line-height: rem(24);
+    font-weight: 700;
+    padding: 0 0 rem(5) 0;
+}
+
+h5 {
+    font-size: rem(18);
+    line-height: rem(18);
+    padding: 0 0 rem(5) 0;
+}
+
+p {
+    @include font-smoothing;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+    Medium Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+
+    h1 {
+        padding: 0 0 rem(30) 0;
+    }
+    
+}
+
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    h1 {
+        padding: 0 0 rem(40) 0;
+    }
+    
+}

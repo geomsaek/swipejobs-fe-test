@@ -1,0 +1,53 @@
+@import "../../styles/imports/variables";
+@import "../../styles/imports/utils";
+
+.job-title-bar {
+
+    width: 100%;
+    padding: rem(20) rem(15);
+
+    &__role,
+    &__company {
+        width: 100%;
+        color: $black;
+    }
+
+    &__role {
+        font-size: rem(20);
+        line-height: rem(22);
+        font-weight: 700;
+    }
+
+    &__company {
+        font-size: rem(16);
+        line-height: rem(18);
+        font-weight: 500;
+        padding: rem(8) 0 0 0;
+    }
+
+}
+
+
+/*
+    Large Screens
+*/
+@media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+
+    .job-title-bar {
+
+        padding: rem(30) rem(20);
+    
+        &__role {
+            font-size: rem(24);
+            line-height: rem(27);
+        }
+    
+        &__company {
+            font-size: rem(18);
+            line-height: rem(22);
+            padding: rem(8) 0 0 0;
+        }
+    
+    }
+
+}

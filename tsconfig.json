@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "sourceMap": false,
+        "removeComments": true,
+        "lib": ["es2017", "dom"],
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "downlevelIteration": true,
+        "resolveJsonModule": true
+    },
+    "exclude": [".git", "node_modules"],
+    "include": ["src/**/*"]
+  }
+  
