@@ -1,6 +1,6 @@
 ## Getting started
 * Open terminal in project directory and run ```npm install```
-* Once installation completes run ```npm install```.
+* Once installation completes run ```npm run start```.
 * Application will open URL ```http://localhost:1234/``` - initial build will take a little longer due to local asset copy.
 * Available routes are:
     * ```/```, root location, displays profile information
